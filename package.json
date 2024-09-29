@@ -1,0 +1,19 @@
+{
+  "name": "extensiontest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rmdir /s /q dist",
+    "compile": "npx tsc",
+    "copy-assets": "robocopy . dist /MIR /XD node_modules dist /XF tsconfig.json package.json",
+    "build": "npm run clean && npm run compile && npm run copy-assets"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chrome-types": "^0.1.307",
+    "typescript": "^5.6.2"
+  }
+}
