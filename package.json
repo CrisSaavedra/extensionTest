@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rmdir /s /q dist",
     "compile": "npx tsc",
-    "copy-assets": "robocopy . dist /MIR /XD node_modules dist /XF tsconfig.json package.json",
+    "copy-assets": "robocopy . dist /MIR /XD node_modules dist src /XF tsconfig.json package.json .gitignore",
     "build": "npm run clean && npm run compile && npm run copy-assets"
   },
   "type": "module",
